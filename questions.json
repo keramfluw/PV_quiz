@@ -1,0 +1,422 @@
+[
+  {
+    "id": "A1-001",
+    "question": "Was ist der Unterschied zwischen elektrischer Leistung und elektrischer Arbeit?",
+    "choices": [
+      "Leistung in kWh, Arbeit in W",
+      "Leistung in W (U×I) zu einem Zeitpunkt; Arbeit/Energie in Wh/kWh über die Zeit",
+      "Beides sind zeitunabhängige Zustandsgrößen",
+      "Arbeit ist nur in DC-Netzen definiert"
+    ],
+    "answer_index": 1,
+    "explanation": "Leistung P=U×I (W); Arbeit/Energie W_el=P×t (Wh/kWh).",
+    "topic": "Grundlagen",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-002",
+    "question": "Welche STC-Bedingungen gelten für die Nennleistung eines PV-Moduls?",
+    "choices": [
+      "800 W/m², 20°C Zelltemp., AM 1,0",
+      "1000 W/m², 25°C Zelltemp., AM 1,5",
+      "1200 W/m², 0°C Zelltemp., AM 1,5",
+      "1000 W/m², 25°C Umgebungstemp., AM 1,0"
+    ],
+    "answer_index": 1,
+    "explanation": "Standard Test Conditions: 1000 W/m², 25°C Zelltemperatur, AM 1,5.",
+    "topic": "Grundlagen",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-003",
+    "question": "Der MPP (Maximum Power Point) ist …",
+    "choices": [
+      "der Punkt minimaler Leistung auf der U-I-Kennlinie",
+      "nur bei Diffuslicht vorhanden",
+      "der Arbeitspunkt mit maximaler Leistung; der WR hält ihn über MPP-Tracking",
+      "identisch mit der Leerlaufspannung U_OC"
+    ],
+    "answer_index": 2,
+    "explanation": "Wechselrichter suchen/halten den MPP, wo P=U×I maximal ist.",
+    "topic": "Grundlagen",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-004",
+    "question": "Wie beeinflusst die Temperatur die Spannung einer Solarzelle im MPP?",
+    "choices": [
+      "Spannung steigt mit steigender Temperatur",
+      "Spannung sinkt mit steigender Temperatur",
+      "Spannung ist temperaturunabhängig",
+      "Nur der Strom ändert sich mit der Temperatur"
+    ],
+    "answer_index": 1,
+    "explanation": "UMPP/VOC nehmen mit steigender Zelltemperatur ab.",
+    "topic": "Grundlagen",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-005",
+    "question": "Welche Aussage zur Einstrahlung ist richtig?",
+    "choices": [
+      "Direkte Strahlung hat keinen Einfluss auf den PV-Ertrag",
+      "Diffuse Strahlung ist unbrauchbar",
+      "Direkte und diffuse Strahlung tragen zum Ertrag bei; direkter Anteil wirkt stärker",
+      "Nur horizontale Einstrahlung zählt"
+    ],
+    "answer_index": 2,
+    "explanation": "Beide Anteile sind relevant; direkter Anteil treibt MPP-Strom stärker.",
+    "topic": "Einstrahlung",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-006",
+    "question": "Typische Schwankung der Jahreserträge (langjährig) an einem Standort ist …",
+    "choices": [
+      "±1 %",
+      "±5 %",
+      "±15 %",
+      "±30 %"
+    ],
+    "answer_index": 2,
+    "explanation": "Im Dokument sind ±15 % für Globalstrahlung/Jahreserträge genannt.",
+    "topic": "Einstrahlung",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-007",
+    "question": "Bypassdioden in Modulen …",
+    "choices": [
+      "erhöhen den MPP-Strom bei Kälte",
+      "leiten Teilstrings bei Verschattung vorbei und vermeiden Hot-Spots",
+      "sind nur in Dünnschichtmodulen notwendig",
+      "reduzieren grundsätzlich die Modulleistung um 10 %"
+    ],
+    "answer_index": 1,
+    "explanation": "Sie umgehen verschattete Zellgruppen und reduzieren Hot-Spots.",
+    "topic": "Module",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-008",
+    "question": "Welche Kennwerte stehen auf Modul-Datenblättern (STC) typischerweise?",
+    "choices": [
+      "PMPP, UMPP, IMPP, VOC, ISC",
+      "Nur PMPP",
+      "Nur mechanische Maße",
+      "Nur NOCT-Werte"
+    ],
+    "answer_index": 0,
+    "explanation": "Elektrische STC-Kennwerte + oft NOCT/Temperaturkoeffizienten.",
+    "topic": "Module",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-009",
+    "question": "Welche Norm qualifiziert kristalline PV-Module (Bauarteignung/-zulassung)?",
+    "choices": [
+      "IEC 61730",
+      "IEC 61215",
+      "IEC 61646",
+      "IEC 61140"
+    ],
+    "answer_index": 1,
+    "explanation": "IEC 61215 für kristalline; IEC 61646 für Dünnschicht.",
+    "topic": "Normen",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-010",
+    "question": "Welche Aussage zur Leistungsgarantie ist korrekt?",
+    "choices": [
+      "Sie ist gesetzlich verpflichtend und identisch mit der Produktgarantie",
+      "Freiwilliges Herstellerversprechen; Bedingungen und Gerichtsstand prüfen",
+      "Sie garantiert den Austausch des Moduls in jedem Fall",
+      "Sie ersetzt eine fachmännische Planung"
+    ],
+    "answer_index": 1,
+    "explanation": "Leistungsgarantie ist freiwillig; Details im Kleingedruckten relevant.",
+    "topic": "Qualität",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-011",
+    "question": "Welche Topologien der Speicheranbindung werden üblicherweise unterschieden?",
+    "choices": [
+      "DC-Kopplung / Hybrid-WR / AC-Kopplung",
+      "Seriell / Parallel",
+      "TN / TT / IT",
+      "Allein DC-Kopplung ist zulässig"
+    ],
+    "answer_index": 0,
+    "explanation": "Im Skript werden DC-, Hybrid- und AC-Kopplung mit Merkmalen diskutiert.",
+    "topic": "Speicher",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-012",
+    "question": "Ost-West-Aufständerung auf Flachdächern …",
+    "choices": [
+      "verschlechtert immer die Wirtschaftlichkeit",
+      "reduziert Mittagsleistung, erhöht Morgen/Abend-Erträge und Eigenverbrauchsquote",
+      "ist nur für Dünnschichtmodule zulässig",
+      "verhindert Verschattung vollständig"
+    ],
+    "answer_index": 1,
+    "explanation": "OW verteilt Erzeugung tageszeitlich, oft höherer Eigenverbrauch.",
+    "topic": "Planung",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-013",
+    "question": "Kirchhoff: In der Reihenschaltung …",
+    "choices": [
+      "addieren sich Ströme, Spannung bleibt",
+      "addieren sich Spannungen, Strom bleibt",
+      "ändern sich weder Strom noch Spannung",
+      "ist Leistung immer konstant"
+    ],
+    "answer_index": 1,
+    "explanation": "Reihe: Spannungen addieren sich; Parallel: Ströme addieren sich.",
+    "topic": "Grundlagen",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-014",
+    "question": "WR-Auslegung: Maximale Modulanzahl pro String leitet sich u.a. her aus …",
+    "choices": [
+      "U_OC des Moduls bei −10 °C und U_max des WR",
+      "I_SC des Moduls bei +70 °C",
+      "Nennstrom des Hausanschlusses",
+      "Anzahl der Bypassdioden"
+    ],
+    "answer_index": 0,
+    "explanation": "Faustformel: Umax(WR) / U_OC(Modul, −10 °C) (ca. 1,15×U_OC@STC).",
+    "topic": "WR",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-015",
+    "question": "WR-Auslegung: Minimale Modulanzahl pro String leitet sich her aus …",
+    "choices": [
+      "U_MPP des WR(min) und U_MPP des Moduls bei 70 °C (~0,8×U_MPP@STC)",
+      "dem Preis des WR",
+      "der Länge der DC-Kabel",
+      "dem NOCT-Wert"
+    ],
+    "answer_index": 0,
+    "explanation": "Faustformel: UMPP(WR min) / UMPP(Modul, 70 °C).",
+    "topic": "WR",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-016",
+    "question": "Welcher Kennwert steigt (nahezu) proportional mit der Einstrahlung?",
+    "choices": [
+      "UMPP",
+      "VOC",
+      "IMPP (und ISC)",
+      "Modulwirkungsgrad"
+    ],
+    "answer_index": 2,
+    "explanation": "Der MPP-Strom steigt nahezu proportional mit der Einstrahlung.",
+    "topic": "Grundlagen",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-017",
+    "question": "Welche Aussage zur Qualitätssicherung ist genannt?",
+    "choices": [
+      "Schäden sind fast immer unabwendbar",
+      "Ca. 40 % der regulierten PV-Schäden wären durch korrekte Planung/Montage vermeidbar",
+      "Nur Module sind relevant, Montage ist egal",
+      "Blitzschutz ist für PV irrelevant"
+    ],
+    "answer_index": 1,
+    "explanation": "Hinweis aus Versicherungs-/Praxisdaten: Qualitätsmängel sind wesentliche Ursache.",
+    "topic": "Qualität",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-018",
+    "question": "Welche Aussage zur CE-Kennzeichnung von Modulen trifft zu?",
+    "choices": [
+      "Nicht notwendig für PV-Module",
+      "Erfüllt i.d.R. die EU-Niederspannungsrichtlinie (z.B. über IEC 61730)",
+      "Ersetzt die IEC 61215 vollständig",
+      "Ist identisch mit einer TÜV-Zertifizierung"
+    ],
+    "answer_index": 1,
+    "explanation": "CE-Kennzeichnung belegt Konformität mit EU-Richtlinien; Sicherheitsnormen relevant.",
+    "topic": "Normen",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-019",
+    "question": "Welche Topologie ist für Nachrüstung an Bestands-PV besonders flexibel?",
+    "choices": [
+      "DC-Kopplung",
+      "Hybrid-Wechselrichter",
+      "AC-Kopplung",
+      "Nur Hochvolt-Lösungen"
+    ],
+    "answer_index": 2,
+    "explanation": "AC-Kopplung ist herstellerunabhängig und gut nachrüstbar.",
+    "topic": "Speicher",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-020",
+    "question": "Welche Angabe gehört NICHT zu mechanischen Moduldaten?",
+    "choices": [
+      "Abmessungen/Rahmen/Glas",
+      "Gewicht",
+      "Kabellänge/Stecker",
+      "U_MPP bei 70 °C"
+    ],
+    "answer_index": 3,
+    "explanation": "U_MPP ist ein elektrischer Kennwert.",
+    "topic": "Module",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-021",
+    "question": "Welche Aussage zur Energiestrategie mit Speicher ist korrekt?",
+    "choices": [
+      "Zuerst Netzbezug, dann Speichern",
+      "Zuerst PV-Verbrauch decken, dann Speicher laden, Überschuss einspeisen",
+      "Immer erst Speicher laden",
+      "Netzladen ist Standard"
+    ],
+    "answer_index": 1,
+    "explanation": "Strategie: erst Last decken, dann speichern; Netzbezug zuletzt.",
+    "topic": "Speicher",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-022",
+    "question": "Welche Aussage zur OW-Variante bzgl. Flächennutzung ist meist zutreffend?",
+    "choices": [
+      "Geringere belegbare kWp pro Grundfläche",
+      "Mehr belegbare kWp pro Grundfläche als Süd mit 30°",
+      "Nur theoretisch möglich",
+      "Verboten auf Flachdächern"
+    ],
+    "answer_index": 1,
+    "explanation": "OW ermöglicht engere Reihenabstände und höhere kWp/m².",
+    "topic": "Planung",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-023",
+    "question": "Welche Aussage zu Dünnschicht vs. kristallin ist richtig (überschlägig)?",
+    "choices": [
+      "Dünnschicht hat typ. 18–25 % Modulwirkungsgrad",
+      "Kristallin hat typ. 8–15 % Modulwirkungsgrad",
+      "Dünnschicht benötigt weniger Fläche pro kWp",
+      "Kristallin benötigt weniger Fläche pro kWp"
+    ],
+    "answer_index": 3,
+    "explanation": "Kristallin benötigt ca. 4–6 m²/kWp, Dünnschicht 8–25 m²/kWp.",
+    "topic": "Technologien",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-024",
+    "question": "Welche Aussage zur WR-Überdimensionierung/Unterdimensionierung ist korrekt?",
+    "choices": [
+      "WR größer schadet immer technisch",
+      "WR kleiner führt ggf. zu Clipping (Leistungs-Derating) bei hoher Einstrahlung",
+      "WR-Größe hat keinen Einfluss auf Kosten",
+      "Es gibt eine starre Regel 1,00 immer"
+    ],
+    "answer_index": 1,
+    "explanation": "Unterdimensionierung kann Spitzen kappen; Verhältnis PPV/P_AC wird projektspezifisch gewählt.",
+    "topic": "WR",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-025",
+    "question": "Welche Normen nennen Anforderungen an netzgekoppelte PV-Anlagen (Auswahl)?",
+    "choices": [
+      "DIN EN 62446, DIN VDE 0100-712, VDE-AR-N 4105",
+      "IEC 60947-2, VDE 0660",
+      "DIN 18015-1 ausschließlich",
+      "IEC 62040 (USV) ausschließlich"
+    ],
+    "answer_index": 0,
+    "explanation": "Diese Normen betreffen Errichtung, Prüfung, Anschluss im Niederspannungsnetz.",
+    "topic": "Normen",
+    "difficulty": 3
+  },
+  {
+    "id": "A1-026",
+    "question": "Welche Aussage zu NOCT-Angaben ist korrekt?",
+    "choices": [
+      "NOCT ist identisch mit STC",
+      "NOCT nutzt 800 W/m², 20°C Umgebung, 1 m/s Wind",
+      "NOCT ist eine Norm für Blitzschutz",
+      "NOCT bestimmt die Bypassdiodenanzahl"
+    ],
+    "answer_index": 1,
+    "explanation": "NOCT-Werte geben typische Betriebsbedingungen wieder und weichen von STC ab.",
+    "topic": "Module",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-027",
+    "question": "Welche Aussage zur Wartung/Reinigung ist korrekt?",
+    "choices": [
+      "Reinigung ist grundsätzlich verboten",
+      "Selbstreinigungseffekt verbessert sich bei Neigungen > 20°",
+      "Nur Dünnschicht darf gereinigt werden",
+      "Neigung hat keinen Einfluss"
+    ],
+    "answer_index": 1,
+    "explanation": "Höhere Neigung fördert Abfluss/Abreinigung; Fachpersonal beachten.",
+    "topic": "Betrieb",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-028",
+    "question": "Welche Aussage zu Speicher-Spannungsebenen ist genannt?",
+    "choices": [
+      "Nur Hochvoltspeicher sind effizient",
+      "Niedervoltspeicher arbeiten typ. 12/48 V; Hochvoltspeicher ~200–600 V",
+      "Niedervoltspeicher sind generell verboten",
+      "Nur 400 V AC ist zulässig"
+    ],
+    "answer_index": 1,
+    "explanation": "Im Skript werden typische Spannungsbereiche und Wirkungsgradunterschiede erwähnt.",
+    "topic": "Speicher",
+    "difficulty": 2
+  },
+  {
+    "id": "A1-029",
+    "question": "Welche Aussage zu Verschattung trifft zu?",
+    "choices": [
+      "Nahe Verschattungen sind unkritisch",
+      "Verschattung ist wirtschaftlich irrelevant",
+      "Verschattung reduziert Ertrag; Auswirkungen sind zu analysieren und zu minimieren",
+      "Bypassdioden verhindern jegliche Verluste"
+    ],
+    "answer_index": 2,
+    "explanation": "Nahe Objekte sind kritisch; Optimierung (Verstringung/Optimierer) möglich.",
+    "topic": "Planung",
+    "difficulty": 1
+  },
+  {
+    "id": "A1-030",
+    "question": "Welche Aussage zur spektralen Empfindlichkeit ist korrekt?",
+    "choices": [
+      "Alle Technologien haben identische spektrale Antwort",
+      "CIS/CdTe/Si unterscheiden sich in spektraler Empfindlichkeit",
+      "Nur AM 1,0 ist relevant",
+      "Spektrum spielt keine Rolle für Erträge"
+    ],
+    "answer_index": 1,
+    "explanation": "Technologien reagieren unterschiedlich auf Wellenlängenbereiche.",
+    "topic": "Technologien",
+    "difficulty": 3
+  }
+]
