@@ -3,11 +3,10 @@ import streamlit as st
 import pandas as pd
 import json
 import random
-import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
-APP_TITLE = "Qrauts AG PV-Basiswissen – Online-Test"
+APP_TITLE = "PV-Basiswissen – Online-Test"
 LOGO_PATH = "assets/logo.png"
 QUESTIONS_FILE = "questions.json"
 
@@ -23,7 +22,7 @@ def init_state():
     if "questions" not in st.session_state:
         st.session_state.questions = []
     if "answers" not in st.session_state:
-        st.session_state.answers = {}  # qid -> choice index
+        st.session_state.answers = {}  # qid -> choice index (or None)
     if "start_time" not in st.session_state:
         st.session_state.start_time = None
     if "end_time" not in st.session_state:
@@ -103,18 +102,28 @@ def timer():
 def render_question(q, idx):
     st.subheader(f"Frage {idx+1} von {len(st.session_state.questions)}")
     st.write(q["question"])
-    choice = st.session_state.answers.get(q["id"])
-    choice = st.radio(
+
+    # Placeholder-first radio to avoid invalid index errors.
+    stored_choice = st.session_state.answers.get(q["id"])  # None or 0..n-1
+    index_for_radio = (stored_choice + 1) if stored_choice is not None else 0
+
+    options = list(range(len(q["choices"]) + 1))  # 0..n ; 0 is placeholder
+    def _fmt(i):
+        return "— Bitte wählen —" if i == 0 else q["choices"][i-1]
+
+    selected = st.radio(
         "Antwort wählen",
-        options=list(range(len(q["choices"]))),
-        format_func=lambda i: q["choices"][i],
-        index=choice if choice is not None else -1,
+        options=options,
+        format_func=_fmt,
+        index=index_for_radio,
         key=f"radio_{q['id']}",
         label_visibility="collapsed"
     )
-    st.session_state.answers[q["id"]] = choice
+
+    st.session_state.answers[q["id"]] = None if selected == 0 else (selected - 1)
 
     if st.session_state.mode == "learn":
+        choice = st.session_state.answers[q["id"]]
         if choice is not None:
             correct = q["answer_index"]
             if choice == correct:
@@ -151,8 +160,9 @@ def evaluate():
     rows = []
     for q in qs:
         given = ans.get(q["id"])
-        is_correct = given == q["answer_index"]
-        correct += 1 if is_correct else 0
+        is_correct = (given is not None) and (given == q["answer_index"])
+        if is_correct:
+            correct += 1
         rows.append({
             "id": q["id"],
             "topic": q["topic"],
@@ -201,7 +211,7 @@ def main():
             st.markdown("### Navigation")
             timer()
             st.progress((st.session_state.current_idx+1)/len(st.session_state.questions))
-            answered = sum(1 for q in st.session_state.questions if q["id"] in st.session_state.answers)
+            answered = sum(1 for q in st.session_state.questions if q["id"] in st.session_state.answers and st.session_state.answers[q['id']] is not None)
             st.caption(f"Beantwortet: {answered}/{len(st.session_state.questions)}")
         q = st.session_state.questions[st.session_state.current_idx]
         render_question(q, st.session_state.current_idx)
