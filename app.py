@@ -6,7 +6,7 @@ import random
 from datetime import datetime, timedelta
 from pathlib import Path
 
-APP_TITLE = "PV-Basiswissen – Online-Test"
+APP_TITLE = "Qrauts AG PV-Basiswissen – Online-Test"
 LOGO_PATH = "assets/logo.png"
 QUESTIONS_FILE = "questions.json"
 
